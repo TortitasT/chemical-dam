@@ -37,6 +37,7 @@ partial class Main
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Main";
             this.Text = "Chemical";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
 
     }
