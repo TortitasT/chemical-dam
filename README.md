@@ -2,8 +2,14 @@
 
 ## Usage
 
-```bash
+```powershell
 dotnet run
+```
+
+## Development
+
+```powershell
+ii .\chemical-dam.sln
 ```
 
 ## Notes
