@@ -1,6 +1,6 @@
 ﻿namespace chemical_dam;
 
-partial class Form1
+partial class Main
 {
     /// <summary>
     ///  Required designer variable.
@@ -28,10 +28,17 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
+            this.SuspendLayout();
+            // 
+            // Main
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Main";
+            this.Text = "Chemical";
+            this.ResumeLayout(false);
+
     }
 
     #endregion
