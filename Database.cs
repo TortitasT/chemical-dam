@@ -1,4 +1,6 @@
-﻿namespace chemical_dam.Types
+﻿using chemical_dam.Types;
+
+namespace chemical_dam
 {
     internal class Database
     {
