@@ -61,12 +61,128 @@ namespace chemical_dam {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a AAAA
+        ///   Busca una cadena traducida similar a 7732-18-5
+        ///Water
+        ///2
+        ///1,8
+        ///2,1
+        ///1333-74-0
+        ///Dihydrogen
+        ///1
+        ///1
+        ///2
+        ///7782-44-7
+        ///Dioxygen
+        ///1
+        ///8
+        ///2
+        ///7664-93-9
+        ///Sulfuric acid
+        ///3
+        ///1,16,8
+        ///2,1,4
+        ///7446-11-9
+        ///Sulfur trioxide
+        ///2
+        ///16,8
+        ///1,3
+        ///74-82-8
+        ///Methane
+        ///2
+        ///6,1
+        ///1,4
+        ///124-38-9
+        ///Carbon dioxide
+        ///2
+        ///6,8
+        ///1,2
+        ///1305-62-0
+        ///Calcium hydroxide
+        ///3
+        ///20,8,1
+        ///1,2,2
+        ///7778-18-9
+        ///Calcium sulfate dihydrate
+        ///3
+        ///20,16,8
+        ///1,1,4
         ///.
         /// </summary>
-        internal static string data {
+        internal static string Compounds {
             get {
-                return ResourceManager.GetString("data", resourceCulture);
+                return ResourceManager.GetString("Compounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,NumberofElectrons,Period,Group,Phase,Radioactive,Natural,Metal,Nonmetal,Metalloid,Type,AtomicRadius,Electronegativity,FirstIonization,Density,MeltingPoint,BoilingPoint,NumberOfIsotopes,Discoverer,Year,SpecificHeat,NumberofShells,NumberofValence
+        ///1,Hydrogen,H,1.007,0,1,1,1,1,gas,,yes,,yes,,Nonmetal,0.79,2.2,13.5984,8.99E-05,14.175,20.28,3,Cavendish,1766,14.304,1,1
+        ///2,Helium,He,4.002,2,2,2,1,18,gas,,yes,,yes,,Noble Gas,0.49,,24.5874,1.79E-0 [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string PeriodicTable {
+            get {
+                return ResourceManager.GetString("PeriodicTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 0
+        ///Electrolysis of water
+        ///Decomposition
+        ///0
+        ///1
+        ///7732-18-5
+        ///2
+        ///2
+        ///1333-74-0,7782-44-7
+        ///2,1
+        ///323.45
+        ///156.03
+        ///99.32
+        ///1
+        ///Synthesis of sulfuric acid
+        ///Synthesis
+        ///1
+        ///2
+        ///7446-11-9,7732-18-5
+        ///1,1
+        ///1
+        ///7664-93-9
+        ///1
+        ///298.36
+        ///94.49
+        ///45.89
+        ///2
+        ///Combustion of methane
+        ///Redox
+        ///1
+        ///2
+        ///74-82-8,7782-44-7
+        ///1,2
+        ///2
+        ///124-38-9,7732-18-5
+        ///1,2
+        ///328.83
+        ///185.39
+        ///84.56
+        ///3
+        ///Generation of calcium sulfate dihydrate
+        ///Acid-base
+        ///1
+        ///2
+        ///7664-93-9,1305-62-0
+        ///1,1
+        ///2
+        ///7778-18-9,7732-18-5
+        ///1,2
+        ///364.93
+        ///63.91
+        ///75.34
+        ///.
+        /// </summary>
+        internal static string Reactions {
+            get {
+                return ResourceManager.GetString("Reactions", resourceCulture);
             }
         }
     }

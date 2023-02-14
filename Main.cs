@@ -9,7 +9,7 @@ public partial class Main : Form
 
     private void Main_Load(object sender, EventArgs e)
     {
-        Alert.show(Resources.data);
+        Alert.show(Resources.PeriodicTable);
 
         Alert.show("Holaaa");
     }
