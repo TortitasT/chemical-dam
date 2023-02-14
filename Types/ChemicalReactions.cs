@@ -1,50 +1,49 @@
-﻿
+﻿namespace chemical_dam.Types;
 
-using System.Numerics;
-
-namespace chemical_dam.Types
+internal enum ChemicalReactionType
 {
-     enum Type
-    {
-        synthesis,
-        decomposition, 
-        displacement,
-        acidBase, 
-        redox, 
-        others
+    Synthesis,
+    Decomposition,
+    Displacement,
+    AcidBase,
+    Redox,
+    Others
+}
 
+internal enum ChemicalReactionEnergyRelationship
+{
+    Endothermic,
+    Exothermic
+}
+
+internal struct ChemicalReaction
+{
+    public ChemicalReaction(string name)
+    {
+        Id = 0;
+        Name = name;
+        Type = ChemicalReactionType.Synthesis;
+        EnergyRelationship = ChemicalReactionEnergyRelationship.Endothermic;
+        KelvinOptimalTemperature = 0;
+        EnthalpyKjPerMolecule = 0;
+        PerformancePercentage = 0;
     }
 
-    enum EnergyticRelationship
-    {
-        endothermic,
-        exothermic
-    }
+    int Id { get; set; }
+    string Name { get; set; }
+    ChemicalReactionType Type { get; set; }
 
-    internal class ChemicalReactions
-    {
-        int id { get; set; }
-        string name { get; set; }
-        string description { get; set; }
-        Type type { get; set; }
-        string energyRelationship { get; set; }
+    ChemicalReactionEnergyRelationship EnergyRelationship { get; set; }
 
-        EnergyticRelationship energyticRelationship { get; set; }
+    ChemicalCompound[] ReactiveList { get; set; } = new ChemicalCompound[10];
+    int[] ReactiveListMoleculesCount { get; set; } = new int[10];
 
-        int[] reactivesList { get; set; } = new int[10];
+    ChemicalCompound[] Products { get; set; } = new ChemicalCompound[10];
+    int[] ProductsMoleculesCount { get; set; } = new int[10];
+    
+    float KelvinOptimalTemperature { get; set; }
 
-        int[] productsList { get; set; } = new int[10];
+    float EnthalpyKjPerMolecule { get; set; }
 
-        int temperature { get; set; }
-
-        String entaenthalpy { get; set; }
-
-        int performance { get; set; }
-
-
-        //Vector<ChemicalCompounds> chemicalCompunds { get; set; }
-
-
-
-    }
+    int PerformancePercentage { get; set; }
 }

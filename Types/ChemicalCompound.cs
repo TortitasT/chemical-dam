@@ -2,17 +2,10 @@
 
 internal struct ChemicalCompound
 {
-    public ChemicalCompound(
-        string casNumber,
-        string compoundName,
-        string[] composedBy,
-        int[] elementsCount
-    )
+    public ChemicalCompound(string casNumber, string compoundName)
     {
         CasNumber = casNumber;
         CompoundName = compoundName;
-        ComposedBy = composedBy;
-        ElementsCount = elementsCount;
     }
 
     private string CasNumber { get; }
