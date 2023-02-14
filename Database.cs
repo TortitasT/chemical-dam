@@ -1,9 +1,8 @@
 ﻿using chemical_dam.Types;
 
-namespace chemical_dam
+namespace chemical_dam;
+
+internal class Database
 {
-    internal class Database
-    {
-        public static ChemicalElement[] PeriodicTable = new ChemicalElement[118];
-    }
+    public static ChemicalElement[] PeriodicTable = new ChemicalElement[118];
 }

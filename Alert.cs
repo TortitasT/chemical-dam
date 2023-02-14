@@ -16,10 +16,7 @@
             Button close = new Button();
             close.Text = "Cerrar";
             close.Click += new EventHandler(
-                (object sender, System.EventArgs e) =>
-                {
-                    form.Close();
-                }
+                (object sender, EventArgs e) => { form.Close(); }
             );
             close.AutoSize = true;
             close.Top = 200;
