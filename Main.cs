@@ -12,5 +12,5 @@ public partial class Main : Form
         Alert.show(Resources.PeriodicTable);
 
         Alert.show("Holaaa");
-    }
+    } 
 }
