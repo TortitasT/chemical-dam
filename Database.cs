@@ -22,13 +22,6 @@ internal class Database
             }
 
             PeriodicTable[i-1] = new ChemicalElement(
-                // "aaa",
-                // "aaa",
-                // 0,
-                // 0f,
-                // 0,
-                // 0,
-                // 0
                 line[1], 
                 line[2], 
                 int.Parse(line[0]), 
