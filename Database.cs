@@ -8,30 +8,47 @@ internal class Database
     public static ChemicalCompound[] ChemicalCompounds = new ChemicalCompound[500];
     public static ChemicalReaction[] ChemicalReactions = new ChemicalReaction[200];
 
-    public static void LoadPeriodicTable(String content, Action onLoaded)
-    {   
-        String[] lines = content.Split("\n");
-        
-        for (int i = 1; i < lines.Length; i++)
-        { 
-            String[] line = lines[i].Split(",");
+    public static void LoadPeriodicTable(string content, Action onLoaded)
+    {
+        string[] lines = content.Split("\n");
 
-            if (line.Length <= 1) // Line is empty
+        try
+        {
+            for (int i = 1; i < lines.Length; i++)
             {
-                break;
+                string[] line = lines[i].Split(",");
+
+                if (i == lines.Length - 1)
+                {
+                    break;
+                } // Last line is empty.
+
+                if (line.Length < 28)
+                {
+                    throw new Exception($"Invalid file format at line {i + 1}");
+                } // 28 columns in the file, not accurate.
+
+                PeriodicTable[i - 1] = new ChemicalElement(
+                    line[1],
+                    line[2],
+                    int.Parse(line[0]),
+                    double.Parse(line[3]),
+                    int.Parse(line[4]),
+                    int.Parse(line[5]),
+                    int.Parse(line[6])
+                );
             }
 
-            PeriodicTable[i-1] = new ChemicalElement(
-                line[1], 
-                line[2], 
-                int.Parse(line[0]), 
-                double.Parse(line[3]), 
-                int.Parse(line[4]), 
-                int.Parse(line[5]), 
-                int.Parse(line[6])
-                );
+            onLoaded();
         }
-        
-        onLoaded();
+        catch (Exception e)
+        {
+            MessageBox.Show(
+                $"Error while loading periodic table:\n{e.Message}",
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
+        }
     }
 }
