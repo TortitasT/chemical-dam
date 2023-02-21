@@ -34,4 +34,19 @@ internal class Database
         
         onLoaded();
     }
+
+    //  public static void LoadChemicalCompounds(String content , Action onLoaded)
+    // {
+    //  String[] lines = content.Split("\n");
+    //
+    //   int index = 0;
+
+    //  for (int i = 0; i < lines.Length; i++)
+
+
+    //  ChemicalCompounds[index] = new ChemicalCompound(
+    //                   
+    //              )
+    //  }
+    //}
 }
