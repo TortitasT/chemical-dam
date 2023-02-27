@@ -133,7 +133,7 @@ partial class PeriodicTable
             this.Controls.Add(this.dataGridElements);
             this.Name = "PeriodicTable";
             this.Text = "Periodic Table";
-            this.Load += new System.EventHandler(this.Main_Load);
+            this.Load += new System.EventHandler(this.PeriodicTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridElements)).EndInit();
             this.ResumeLayout(false);
 

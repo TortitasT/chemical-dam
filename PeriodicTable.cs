@@ -7,7 +7,7 @@ public partial class PeriodicTable : Form
         InitializeComponent();
     }
 
-    private void Main_Load(object sender, EventArgs e)
+    private void PeriodicTable_Load(object sender, EventArgs e)
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
 

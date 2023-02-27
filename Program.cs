@@ -12,6 +12,6 @@ internal static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        Application.Run(new PeriodicTable());
+        Application.Run(new Main());
     }
 }
