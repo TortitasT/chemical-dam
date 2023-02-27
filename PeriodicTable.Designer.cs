@@ -64,6 +64,7 @@ partial class PeriodicTable
             this.dataGridElements.RowTemplate.Height = 29;
             this.dataGridElements.Size = new System.Drawing.Size(981, 593);
             this.dataGridElements.TabIndex = 0;
+            this.dataGridElements.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridElements_CellContentClick);
             // 
             // NameColumn
             // 

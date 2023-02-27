@@ -36,4 +36,9 @@ public partial class PeriodicTable : Form
             );
         }
     }
+
+    private void dataGridElements_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
+    }
 }
