@@ -12,5 +12,11 @@
             PeriodicTable periodicTable = new PeriodicTable();
             periodicTable.Show();
         }
+
+        private void compuestosQuimicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChemicalComponents chemicalComponents = new ChemicalComponents();
+            chemicalComponents.Show();
+        }
     }
 }

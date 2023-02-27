@@ -87,7 +87,7 @@
             this.compuestosQuimicosToolStripMenuItem,
             this.reaccionesQuimicasToolStripMenuItem});
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.importarToolStripMenuItem.Text = "Importar";
             // 
             // tablaPeriodicaToolStripMenuItem
@@ -102,6 +102,7 @@
             this.compuestosQuimicosToolStripMenuItem.Name = "compuestosQuimicosToolStripMenuItem";
             this.compuestosQuimicosToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.compuestosQuimicosToolStripMenuItem.Text = "Compuestos Quimicos";
+            this.compuestosQuimicosToolStripMenuItem.Click += new System.EventHandler(this.compuestosQuimicosToolStripMenuItem_Click);
             // 
             // reaccionesQuimicasToolStripMenuItem
             // 

@@ -52,18 +52,17 @@ internal class Database
         }
     }
 
-    //  public static void LoadChemicalCompounds(String content , Action onLoaded)
-    // {
-    //  String[] lines = content.Split("\n");
-    //
-    //   int index = 0;
+    public static void LoadChemicalCompounds(String content, Action onLoaded)
+    {
+        String[] lines = content.Split("\n");
 
-    //  for (int i = 0; i < lines.Length; i++)
-
-
-    //  ChemicalCompounds[index] = new ChemicalCompound(
-    //                   
-    //              )
-    //  }
-    //}
+        for (int i = 5, j = 0; i < lines.Length; i += 5 , j++)
+            ChemicalCompounds[j] = new ChemicalCompound(
+                    lines[i-5],
+                    lines[i-4],
+                    lines[i-2].Split(","),
+                    lines[i-1].Split(",").Select(int.Parse).ToArray());
+        
+        onLoaded();
+    }
 }
