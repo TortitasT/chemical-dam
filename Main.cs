@@ -18,5 +18,11 @@
             ChemicalComponents chemicalComponents = new ChemicalComponents();
             chemicalComponents.Show();
         }
+
+        private void reaccionesQuimicasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChemicalReactions chemicalReactions = new ChemicalReactions();
+            chemicalReactions.Show();
+        }
     }
 }

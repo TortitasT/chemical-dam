@@ -1,4 +1,5 @@
-﻿using chemical_dam.Types;
+﻿using System.Diagnostics;
+using chemical_dam.Types;
 
 namespace chemical_dam;
 
@@ -56,13 +57,57 @@ internal class Database
     {
         String[] lines = content.Split("\n");
 
-        for (int i = 5, j = 0; i < lines.Length; i += 5 , j++)
-            ChemicalCompounds[j] = new ChemicalCompound(
-                    lines[i-5],
-                    lines[i-4],
-                    lines[i-2].Split(","),
-                    lines[i-1].Split(",").Select(int.Parse).ToArray());
-        
-        onLoaded();
+        try
+        {
+            for (int i = 5, j = 0; i < lines.Length; i += 5, j++)
+                ChemicalCompounds[j] = new ChemicalCompound(
+                    lines[i - 5],
+                    lines[i - 4],
+                    lines[i - 2].Split(","),
+                    lines[i - 1].Split(",").Select(int.Parse).ToArray());
+
+            onLoaded();
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show(
+                $"Error while loading chemical compounds:\n{e.Message}",
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
+        }
+    }
+    
+    public static void LoadChemicalReactions(String content, Action onLoaded)
+    {
+        String[] lines = content.Split("\n");
+
+        try
+        {
+            for (int i = 13, j = 0; i < lines.Length; i += 13, j++)
+                ChemicalReactions[j] = new ChemicalReaction(
+                    int.Parse(lines[i - 13]),
+                    lines[i - 12],
+                    lines[i - 11],
+                    int.Parse(lines[i - 10]) == 0
+                        ? ChemicalReactionEnergyRelationship.Endothermic
+                        : ChemicalReactionEnergyRelationship.Exothermic,
+                    float.Parse(lines[i - 3]),
+                    float.Parse(lines[i - 2]),
+                    float.Parse(lines[i - 1])
+                );
+            
+            onLoaded();
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show(
+                $"Error while loading chemical reactions on line:\n{e.Message}",
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
+        }
     }
 }

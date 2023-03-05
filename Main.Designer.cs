@@ -44,9 +44,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(32, 36);
+            this.label1.Location = new System.Drawing.Point(28, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 52);
+            this.label1.Size = new System.Drawing.Size(235, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chemical DAM";
             // 
@@ -54,9 +54,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(5, 88);
+            this.label2.Location = new System.Drawing.Point(4, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(318, 32);
+            this.label2.Size = new System.Drawing.Size(252, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Comienza por abrir el menu.";
             // 
@@ -68,7 +68,8 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(335, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(293, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,7 +78,7 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importarToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // importarToolStripMenuItem
@@ -87,45 +88,47 @@
             this.compuestosQuimicosToolStripMenuItem,
             this.reaccionesQuimicasToolStripMenuItem});
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             // 
             // tablaPeriodicaToolStripMenuItem
             // 
             this.tablaPeriodicaToolStripMenuItem.Name = "tablaPeriodicaToolStripMenuItem";
-            this.tablaPeriodicaToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.tablaPeriodicaToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.tablaPeriodicaToolStripMenuItem.Text = "Tabla Periodica";
             this.tablaPeriodicaToolStripMenuItem.Click += new System.EventHandler(this.tablaPeriodicaToolStripMenuItem_Click);
             // 
             // compuestosQuimicosToolStripMenuItem
             // 
             this.compuestosQuimicosToolStripMenuItem.Name = "compuestosQuimicosToolStripMenuItem";
-            this.compuestosQuimicosToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.compuestosQuimicosToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.compuestosQuimicosToolStripMenuItem.Text = "Compuestos Quimicos";
             this.compuestosQuimicosToolStripMenuItem.Click += new System.EventHandler(this.compuestosQuimicosToolStripMenuItem_Click);
             // 
             // reaccionesQuimicasToolStripMenuItem
             // 
             this.reaccionesQuimicasToolStripMenuItem.Name = "reaccionesQuimicasToolStripMenuItem";
-            this.reaccionesQuimicasToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.reaccionesQuimicasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.reaccionesQuimicasToolStripMenuItem.Text = "Reacciones Quimicas";
+            this.reaccionesQuimicasToolStripMenuItem.Click += new System.EventHandler(this.reaccionesQuimicasToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 129);
+            this.ClientSize = new System.Drawing.Size(293, 97);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "Chemical DAM";
             this.menuStrip1.ResumeLayout(false);

@@ -18,32 +18,47 @@ internal enum ChemicalReactionEnergyRelationship
 
 internal struct ChemicalReaction
 {
-    public ChemicalReaction(string name)
+    public ChemicalReaction(
+        int id,
+        string name,
+        string type,
+        ChemicalReactionEnergyRelationship energyRelationship,
+        float kelvinOptimalTemperature,
+        float enthalpyKjPerMolecule,
+        float performancePercentage
+        )
     {
-        Id = 0;
+        Id = id;
         Name = name;
-        Type = ChemicalReactionType.Synthesis;
-        EnergyRelationship = ChemicalReactionEnergyRelationship.Endothermic;
-        KelvinOptimalTemperature = 0;
-        EnthalpyKjPerMolecule = 0;
-        PerformancePercentage = 0;
+
+        // Reactions.txt is not enum friendly :/
+        if (type.Contains("Acid-base"))
+        {
+            type = "AcidBase";
+        }
+        Type = (ChemicalReactionType) Enum.Parse(typeof(ChemicalReactionType), type);
+        
+        EnergyRelationship = energyRelationship;
+        KelvinOptimalTemperature = kelvinOptimalTemperature;
+        EnthalpyKjPerMolecule = enthalpyKjPerMolecule;
+        PerformancePercentage = performancePercentage;
     }
 
-    int Id { get; set; }
-    string Name { get; set; }
-    ChemicalReactionType Type { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public ChemicalReactionType Type { get; set; }
 
-    ChemicalReactionEnergyRelationship EnergyRelationship { get; set; }
+    public ChemicalReactionEnergyRelationship EnergyRelationship { get; set; }
 
-    ChemicalCompound[] ReactiveList { get; set; } = new ChemicalCompound[10];
-    int[] ReactiveListMoleculesCount { get; set; } = new int[10];
+    public ChemicalCompound[] ReactiveList { get; set; } = new ChemicalCompound[10];
+    public int[] ReactiveListMoleculesCount { get; set; } = new int[10];
 
-    ChemicalCompound[] Products { get; set; } = new ChemicalCompound[10];
-    int[] ProductsMoleculesCount { get; set; } = new int[10];
+    public ChemicalCompound[] Products { get; set; } = new ChemicalCompound[10];
+    public int[] ProductsMoleculesCount { get; set; } = new int[10];
     
-    float KelvinOptimalTemperature { get; set; }
+    public float KelvinOptimalTemperature { get; set; }
 
-    float EnthalpyKjPerMolecule { get; set; }
+    public float EnthalpyKjPerMolecule { get; set; }
 
-    int PerformancePercentage { get; set; }
+    public float PerformancePercentage { get; set; }
 }

@@ -57,12 +57,13 @@ partial class PeriodicTable
             this.NeutronCountColumn,
             this.ProtonCountColumn,
             this.ElectronCountColumn});
-            this.dataGridElements.Location = new System.Drawing.Point(12, 12);
+            this.dataGridElements.Location = new System.Drawing.Point(10, 9);
+            this.dataGridElements.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridElements.Name = "dataGridElements";
             this.dataGridElements.ReadOnly = true;
             this.dataGridElements.RowHeadersWidth = 51;
             this.dataGridElements.RowTemplate.Height = 29;
-            this.dataGridElements.Size = new System.Drawing.Size(981, 593);
+            this.dataGridElements.Size = new System.Drawing.Size(858, 445);
             this.dataGridElements.TabIndex = 0;
             this.dataGridElements.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridElements_CellContentClick);
             // 
@@ -73,7 +74,7 @@ partial class PeriodicTable
             this.NameColumn.MinimumWidth = 6;
             this.NameColumn.Name = "NameColumn";
             this.NameColumn.ReadOnly = true;
-            this.NameColumn.Width = 78;
+            this.NameColumn.Width = 64;
             // 
             // SymbolColumn
             // 
@@ -82,7 +83,7 @@ partial class PeriodicTable
             this.SymbolColumn.MinimumWidth = 6;
             this.SymbolColumn.Name = "SymbolColumn";
             this.SymbolColumn.ReadOnly = true;
-            this.SymbolColumn.Width = 88;
+            this.SymbolColumn.Width = 72;
             // 
             // AtomicNumberColumn
             // 
@@ -90,7 +91,7 @@ partial class PeriodicTable
             this.AtomicNumberColumn.MinimumWidth = 6;
             this.AtomicNumberColumn.Name = "AtomicNumberColumn";
             this.AtomicNumberColumn.ReadOnly = true;
-            this.AtomicNumberColumn.Width = 144;
+            this.AtomicNumberColumn.Width = 108;
             // 
             // AtomicMassColumn
             // 
@@ -98,7 +99,7 @@ partial class PeriodicTable
             this.AtomicMassColumn.MinimumWidth = 6;
             this.AtomicMassColumn.Name = "AtomicMassColumn";
             this.AtomicMassColumn.ReadOnly = true;
-            this.AtomicMassColumn.Width = 123;
+            this.AtomicMassColumn.Width = 93;
             // 
             // NeutronCountColumn
             // 
@@ -106,7 +107,7 @@ partial class PeriodicTable
             this.NeutronCountColumn.MinimumWidth = 6;
             this.NeutronCountColumn.Name = "NeutronCountColumn";
             this.NeutronCountColumn.ReadOnly = true;
-            this.NeutronCountColumn.Width = 135;
+            this.NeutronCountColumn.Width = 103;
             // 
             // ProtonCountColumn
             // 
@@ -114,7 +115,7 @@ partial class PeriodicTable
             this.ProtonCountColumn.MinimumWidth = 6;
             this.ProtonCountColumn.Name = "ProtonCountColumn";
             this.ProtonCountColumn.ReadOnly = true;
-            this.ProtonCountColumn.Width = 125;
+            this.ProtonCountColumn.Width = 96;
             // 
             // ElectronCountColumn
             // 
@@ -122,17 +123,21 @@ partial class PeriodicTable
             this.ElectronCountColumn.MinimumWidth = 6;
             this.ElectronCountColumn.Name = "ElectronCountColumn";
             this.ElectronCountColumn.ReadOnly = true;
-            this.ElectronCountColumn.Width = 135;
+            this.ElectronCountColumn.Width = 102;
             // 
             // PeriodicTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1005, 617);
+            this.ClientSize = new System.Drawing.Size(879, 463);
             this.Controls.Add(this.dataGridElements);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PeriodicTable";
+            this.ShowIcon = false;
             this.Text = "Periodic Table";
             this.Load += new System.EventHandler(this.PeriodicTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridElements)).EndInit();

@@ -46,12 +46,13 @@
             this.CASNumberColumn,
             this.ChemicalElementsColumn,
             this.ElementsCount});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 9);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(679, 320);
             this.dataGridView1.TabIndex = 0;
             // 
             // NameColumn
@@ -88,12 +89,16 @@
             // 
             // ChemicalComponents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChemicalComponents";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "Chemical Components";
             this.Load += new System.EventHandler(this.ChemicalComponents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
