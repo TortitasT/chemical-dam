@@ -14,26 +14,4 @@ ii .\chemical-dam.sln
 
 ## Notes
 
-Visual studio 2022
-
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
-Odio Winforms
+Visual studio 2022 is required to build the project.
