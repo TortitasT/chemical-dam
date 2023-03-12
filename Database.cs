@@ -110,4 +110,20 @@ internal class Database
             );
         }
     }
+
+    public static int GetLastIndex<T>(T[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            // Doesnt work for structs
+            // if (array[i] == null)
+            //     return i - 1;
+            
+            // Works for structs
+            if (array[i].Equals(default(T)))
+                return i - 1;
+        }
+
+        return array.Length - 1;
+    }
 }

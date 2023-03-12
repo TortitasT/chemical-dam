@@ -1,3 +1,5 @@
+using chemical_dam.Types;
+
 namespace chemical_dam;
 
 public partial class PeriodicTable : Form
@@ -24,6 +26,11 @@ public partial class PeriodicTable : Form
 
                     for (int i = 0; i < Database.PeriodicTable.Length; i++)
                     {
+                        if (Database.PeriodicTable[i].Equals(default(ChemicalElement)))
+                        {
+                            continue;
+                        }
+
                         dataGridElements.Rows[i].Cells[0].Value = Database.PeriodicTable[i].Name;
                         dataGridElements.Rows[i].Cells[1].Value = Database.PeriodicTable[i].Symbol;
                         dataGridElements.Rows[i].Cells[2].Value = Database.PeriodicTable[i].AtomicNumber;
@@ -35,10 +42,5 @@ public partial class PeriodicTable : Form
                 }
             );
         }
-    }
-
-    private void dataGridElements_CellContentClick(object sender, DataGridViewCellEventArgs e)
-    {
-
     }
 }

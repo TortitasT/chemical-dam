@@ -29,6 +29,11 @@ namespace chemical_dam
                         Database.ChemicalCompounds.ToList().Where(x => !x.Equals(default(ChemicalCompound))).ToList().ForEach(
                             compound =>
                             {
+                                if (compound.Equals(default(ChemicalCompound)))
+                                {
+                                    return;
+                                }
+                                
                                 String composedBy = string.Join(", ", compound.ComposedBy);
 
                                 // These are ints
@@ -44,6 +49,25 @@ namespace chemical_dam
                     }
                 );
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(Database.GetLastIndex(Database.PeriodicTable) == -1)
+            {
+                Alert.show("Please load the periodic table first.");
+                return;
+            }
+            
+            var rowData = dataGridView1.Rows[e.RowIndex].Cells;
+
+            var chemicalCompounds = Database.ChemicalCompounds.ToList().Where(
+                compound => compound.CasNumber == rowData[0].Value.ToString()
+            );
+            
+            var form = chemicalCompounds.First().ChemicalForm();
+            
+            Alert.show(form);
         }
     }
 }

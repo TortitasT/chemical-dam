@@ -1,4 +1,6 @@
-﻿namespace chemical_dam.Types;
+﻿using System.Text;
+
+namespace chemical_dam.Types;
 
 internal enum ChemicalReactionType
 {
@@ -61,4 +63,22 @@ internal struct ChemicalReaction
     public float EnthalpyKjPerMolecule { get; set; }
 
     public float PerformancePercentage { get; set; }
+
+    public string Reaction()
+    {
+        var output = new StringBuilder();
+        
+        for (int i = 0; i < ReactiveList.Length; i++)
+        {
+            if (ReactiveList[i].Equals(default(ChemicalCompound)))
+            {
+                continue;
+            }
+            
+            output.Append(ReactiveList[i].ChemicalForm());
+            output.Append(" + ");
+        }
+
+        return output.ToString();
+    }
 }

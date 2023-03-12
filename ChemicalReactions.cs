@@ -1,4 +1,6 @@
-﻿namespace chemical_dam
+﻿using chemical_dam.Types;
+
+namespace chemical_dam
 {
     public partial class ChemicalReactions : Form
     {
@@ -24,6 +26,11 @@
                         
                         for (int i = 0; i < Database.ChemicalReactions.Length; i++)
                         {
+                            if (Database.ChemicalReactions[i].Equals(default(ChemicalReaction)))
+                            {
+                                continue;
+                            }
+
                             dataGridView1.Rows[i].Cells[0].Value = Database.ChemicalReactions[i].Id;
                             dataGridView1.Rows[i].Cells[1].Value = Database.ChemicalReactions[i].Name;
                             dataGridView1.Rows[i].Cells[2].Value = Database.ChemicalReactions[i].Type;
@@ -35,6 +42,31 @@
                     }
                 );
             }
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(Database.GetLastIndex(Database.PeriodicTable) == -1)
+            {
+                Alert.show("Please load the periodic table first.");
+                return;
+            }
+            
+            if(Database.GetLastIndex(Database.ChemicalCompounds) == -1)
+            {
+                Alert.show("Please load chemical compounds first.");
+                return;
+            }
+            
+            var rowData = dataGridView1.Rows[e.RowIndex].Cells;
+            
+            var reaction = Database.ChemicalReactions.ToList().Where(x => {
+                return x.Id == 
+                       int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }).First();
+            
+            // TODO
+            Alert.show(reaction.Reaction());
         }
     }
 }
