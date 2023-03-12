@@ -1,0 +1,25 @@
+@startuml
+enum ChemicalReactionType {
+    Synthesis,
+    Decomposition,
+    Displacement,
+    AcidBase,
+    Redox,
+    Others,
+}
+enum ChemicalReactionEnergyRelationship {
+    Endothermic,
+    Exothermic,
+}
+class ChemicalReaction <<struct>> {
+    + ChemicalReaction(id:int, name:string, type:string, energyRelationship:ChemicalReactionEnergyRelationship, kelvinOptimalTemperature:float, enthalpyKjPerMolecule:float, performancePercentage:float)
+    + Id : int <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + KelvinOptimalTemperature : float <<get>> <<set>>
+    + EnthalpyKjPerMolecule : float <<get>> <<set>>
+    + PerformancePercentage : float <<get>> <<set>>
+    + Reaction() : string
+}
+ChemicalReaction --> "Type" ChemicalReactionType
+ChemicalReaction --> "EnergyRelationship" ChemicalReactionEnergyRelationship
+@enduml

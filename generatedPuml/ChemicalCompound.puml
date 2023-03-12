@@ -1,0 +1,8 @@
+@startuml
+class ChemicalCompound <<struct>> {
+    + ChemicalCompound(casNumber:string, compoundName:string, composedBy:string[], elementsCount:int[])
+    + CasNumber : string <<get>>
+    + CompoundName : string <<get>>
+    + ChemicalForm() : string
+}
+@enduml

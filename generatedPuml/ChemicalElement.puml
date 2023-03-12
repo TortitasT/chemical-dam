@@ -1,0 +1,12 @@
+@startuml
+class ChemicalElement <<struct>> {
+    + ChemicalElement(name:string, symbol:string, atomicNumber:int, atomicMass:double, neutronCount:int, protonCount:int, electronCount:int)
+    + Name : string <<get>> <<set>>
+    + Symbol : string <<get>> <<set>>
+    + AtomicNumber : int <<get>> <<set>>
+    + AtomicMass : double <<get>> <<set>>
+    + NeutronCount : int <<get>> <<set>>
+    + ProtonCount : int <<get>> <<set>>
+    + ElectronCount : int <<get>> <<set>>
+}
+@enduml

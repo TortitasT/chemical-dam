@@ -1,0 +1,5 @@
+@startuml
+!include .\\ChemicalCompound.puml
+!include .\\ChemicalElement.puml
+!include .\\ChemicalReactions.puml
+@enduml
