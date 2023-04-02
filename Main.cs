@@ -24,4 +24,10 @@ public partial class Main : Form
         var chemicalReactions = new ChemicalReactions();
         chemicalReactions.Show();
     }
+
+    private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        var about = new About();
+        about.Show();
+    }
 }
