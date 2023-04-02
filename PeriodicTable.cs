@@ -11,11 +11,11 @@ public partial class PeriodicTable : Form
 
     private void PeriodicTable_Load(object sender, EventArgs e)
     {
-        OpenFileDialog openFileDialog = new OpenFileDialog();
+        var openFileDialog = new OpenFileDialog();
 
         if (openFileDialog.ShowDialog() == DialogResult.OK)
         {
-            String content = File.ReadAllText(openFileDialog.FileName);
+            var content = File.ReadAllText(openFileDialog.FileName);
 
             Database.LoadPeriodicTable(
                 content, () =>
@@ -24,12 +24,9 @@ public partial class PeriodicTable : Form
                         Database.PeriodicTable.Length
                     );
 
-                    for (int i = 0; i < Database.PeriodicTable.Length; i++)
+                    for (var i = 0; i < Database.PeriodicTable.Length; i++)
                     {
-                        if (Database.PeriodicTable[i].Equals(default(ChemicalElement)))
-                        {
-                            continue;
-                        }
+                        if (Database.PeriodicTable[i].Equals(default(ChemicalElement))) continue;
 
                         dataGridElements.Rows[i].Cells[0].Value = Database.PeriodicTable[i].Name;
                         dataGridElements.Rows[i].Cells[1].Value = Database.PeriodicTable[i].Symbol;

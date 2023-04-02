@@ -1,12 +1,9 @@
-﻿using System.Drawing.Printing;
+﻿namespace chemical_dam;
 
-namespace chemical_dam
+internal static class Alert
 {
-    internal class Alert
+    public static void show(string message)
     {
-        public static void show(string message)
-        {
-            MessageBox.Show(message, "Chemical DAM", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        MessageBox.Show(message, "Chemical DAM", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 }

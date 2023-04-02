@@ -1,6 +1,5 @@
 ﻿<root>
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                id="root"
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root"
                 xmlns="">
         <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
         <xsd:element name="root" msdata:IsDataSet="true">
@@ -63,32 +62,4 @@
             PublicKeyToken=b77a5c561934e089
         </value>
     </resheader>
-    <metadata name="IdColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
-    <metadata name="NameColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
-    <metadata name="TypeColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
-    <metadata name="EnergyRelationshipColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
-    <metadata name="KelvinOptimalTemperatureColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
-    <metadata name="EnthalpyKjPerMoleculeColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
-    <metadata name="PerformancePercentageColumn.UserAddedColumn"
-              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <value>True</value>
-    </metadata>
 </root>
